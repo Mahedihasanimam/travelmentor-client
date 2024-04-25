@@ -1,9 +1,11 @@
 
 
+
 const Home = () => {
     return (
         <div>
-            <h1>this is home</h1>
+           
+            <img className="w-full" src="https://r2.easyimg.io/ms5dhceow/111.jpg" alt="" />
         </div>
     );
 };
