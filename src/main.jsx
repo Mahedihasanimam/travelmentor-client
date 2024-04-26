@@ -12,6 +12,11 @@ import Home from './pages/Home';
 import AddTourist from './pages/AddTourist';
 import AllTourists from './pages/AllTourists';
 import MyList from './pages/MyList';
+import AuthProvider from './Authprovidfer/AuthProvider';
+import  { Toaster } from 'react-hot-toast';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import PrivateRoute from './Route/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addtourists',
-        element:<AddTourist></AddTourist>
+        element:<PrivateRoute><AddTourist></AddTourist></PrivateRoute>
       },
       {
         path:'/alltourists',
@@ -31,13 +36,24 @@ const router = createBrowserRouter([
       },
       {
         path:'/mylist',
-        element:<MyList></MyList>
+        element:<PrivateRoute><MyList></MyList></PrivateRoute>
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
       }
     ]
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    <Toaster></Toaster>
+    </AuthProvider>
   </React.StrictMode>,
 )

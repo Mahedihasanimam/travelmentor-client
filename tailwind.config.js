@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        bgimg: "url('./public/cool-background.svg')"
+      },
       fontFamily:{
         popins:[" font-family: 'Poppins', sans-serif;"]
       }

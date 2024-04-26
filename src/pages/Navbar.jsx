@@ -6,11 +6,16 @@ import { CiBoxList } from "react-icons/ci";
 import { FaUserCircle } from "react-icons/fa";
 import { CiLogin } from "react-icons/ci";
 import { SiSimplelogin } from "react-icons/si";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LuMenu } from "react-icons/lu";
+import { AuthContext } from "../Authprovidfer/AuthProvider";
 
 const Navbar = () => {
+  const {user,logout}=useContext(AuthContext)
     const [open,setopen]=useState(false)
+    const handleLogout=()=>{
+      logout()
+    }
   const NavigateItem = (
     <>
       <li className="font-semibold ">
@@ -18,7 +23,7 @@ const Navbar = () => {
           to={"/"}
           className={({ isActive }) =>
             isActive
-              ? "text-yellow-400 bg-gray-100 no-underline font-bold"
+              ? "text-green-400 bg-gray-100 no-underline font-bold"
               : " text-black no-underline font-bold"
           }
         >
@@ -31,7 +36,7 @@ const Navbar = () => {
           to={"/alltourists"}
           className={({ isActive }) =>
             isActive
-              ? "text-yellow-400 bg-gray-100 no-underline font-bold"
+              ? "text-green-400 bg-gray-100 no-underline font-bold"
               : " text-black no-underline font-bold"
           }
         >
@@ -45,7 +50,7 @@ const Navbar = () => {
           to={"/addtourists"}
           className={({ isActive }) =>
             isActive
-              ? "text-yellow-400 bg-gray-100 no-underline font-bold"
+              ? "text-green-400 bg-gray-100 no-underline font-bold"
               : " text-black no-underline font-bold"
           }
         >
@@ -59,7 +64,7 @@ const Navbar = () => {
           to={"/mylist"}
           className={({ isActive }) =>
             isActive
-              ? "text-yellow-400 bg-gray-300 no-underline font-bold"
+              ? "text-green-400 bg-gray-300 no-underline font-bold"
               : " text-black no-underline font-bold"
           }
         >
@@ -98,20 +103,34 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{NavigateItem}</ul>
       </div>
       <div className="navbar-end pr-16">
-        <div className="dropdown dropdown-hover">
-          <div tabIndex={0} role="button" className="btn m-1 bg-transparent">
-           <FaUserCircle size={25}></FaUserCircle>
+        <div className="dropdown ">
+          <div tabIndex={0} role="button" className={(user?'m-1 bg-white':'btn m-1 bg-white')}>
+         <div className="w-12 rounded-full">
+        {
+          user ? <div><img className="rounded-full" title={user.displayName} src={user.photoURL} alt="" /></div> :<FaUserCircle size={25}></FaUserCircle>
+        }
+         
+         </div>
+         
           </div>
           <ul
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
+           {
+            user?
+             <li>
+            <button onClick={handleLogout}>Logout</button>
+            </li>:
+            <div>
             <li>
-             <Link to={'/login'}><CiLogin></CiLogin> Login</Link>
-            </li>
-            <li>
-             <Link to={'register'}><SiSimplelogin></SiSimplelogin> Register</Link>
-            </li>
+          <Link to={'/login'}><CiLogin></CiLogin> Login</Link>
+         </li>
+         <li>
+          <Link to={'/register'}><SiSimplelogin></SiSimplelogin> Register</Link>
+         </li>
+         </div>
+           }
           </ul>
         </div>
       </div>
