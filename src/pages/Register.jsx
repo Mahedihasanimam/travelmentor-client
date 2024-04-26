@@ -67,7 +67,7 @@ const Register = () => {
     return (
         <div className="bg-bgimg bg-bottom  h-full p-4 bg-no-repeat bg-cover" >
         {/* <PageTitle title={'Register'}></PageTitle> */}
-      <div className=" max-w-md my-4 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black" data-aos="fade-up"
+      <div className=" max-w-md my-4 mx-auto p-8 space-y-3 shadow-md rounded-xl  bg-white opacity-70 text-black" data-aos="fade-up"
    data-aos-duration="1000">
        <h1 className="text-2xl font-bold text-center">Register</h1>
        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

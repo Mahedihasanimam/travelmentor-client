@@ -152,19 +152,19 @@ const Navbar = () => {
           >
             {user ? (
               <li>
-                <button onClick={handleLogout} className="text-green-500">
+                <button onClick={handleLogout} className="text-green-500 font-bold">
                   <CiLogout></CiLogout> Logout
                 </button>
               </li>
             ) : (
               <div>
                 <li>
-                  <Link to={"/login"} className="text-green-500">
+                  <Link to={"/login"} className="text-green-500 font-bold">
                     <CiLogin></CiLogin> Login
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/register"} className="text-green-500">
+                  <Link to={"/register"} className="text-green-500 font-bold">
                     <SiSimplelogin></SiSimplelogin> Register
                   </Link>
                 </li>

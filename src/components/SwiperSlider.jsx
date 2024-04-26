@@ -39,7 +39,7 @@ const SwiperSlider = () => {
           <div className="" >
             <img
               className="w-full md:max-h-[600px]"
-              src=" https://r2.easyimg.io/ms5dhceow/111.jpg"
+              src=" https://i.postimg.cc/Vkznkwkj/111.jpg"
               alt=""
             />
             <div className="bg-black opacity-15 w-full h-full absolute top-0">
@@ -63,7 +63,7 @@ const SwiperSlider = () => {
         <SwiperSlide>
           <img
             className="w-full md:max-h-[600px] h-full"
-            src="https://r2.easyimg.io/dk6qbq3b5/free-travel-agency-web-banner-design-template-1180x664.jpg"
+            src="https://i.postimg.cc/T2CpJbdW/Free-Travel-Agency-Web-Banner-Design-Template-1180x664.jpg"
             alt=""
           />
         </SwiperSlide>
