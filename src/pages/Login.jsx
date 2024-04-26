@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Authprovidfer/AuthProvider";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
@@ -19,7 +20,10 @@ const Login = () => {
     const onSubmit = (data) =>{
       login(data.email,data.password)
       .then(result=>{
-        toast.success('Login succesfully')
+        Swal.fire({
+          title: "Login succesfully!",
+          icon: "success"
+        });
         navigate('/')
   
       })
@@ -34,7 +38,10 @@ const Login = () => {
   const handlegoogle=()=>{
     googleLogin()
     .then(result=>{
-      toast.success('Login succesfully')
+      Swal.fire({
+        title: "Account created succesfully!",
+        icon: "success"
+      });
       navigate(location?.state || '/')
   
     })
@@ -46,7 +53,10 @@ const Login = () => {
   const handlegithub=()=>{
     githubLogin()
     .then(result=>{
-      toast.success('Login succesfully')
+      Swal.fire({
+        title: "Account created succesfully!!",
+        icon: "success"
+      });
       navigate(location?.state || '/')
   
     })

@@ -7,6 +7,7 @@ import { updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import { VscEyeClosed } from "react-icons/vsc";
 import { RxEyeOpen } from "react-icons/rx";
+import Swal from "sweetalert2";
 
 const Register = () => {
     const {createUser,logout}=useContext(AuthContext)
@@ -37,13 +38,17 @@ const Register = () => {
 
     console.log(password,name,photoUrl)
     if(!regex.test(password)){
-      return toast.error('password shouldbe an uppercase,a Lowercase and must be at least 6 character')
+      return toast.error('weak password')
     }
     createUser(data.mail,data.password)
     .then(result=>{
       navigate('/login')
       logout()
-      toast.success('registared succesfully')
+      Swal.fire({
+        title: "Registration succes!",
+        text: "Login and continue",
+        icon: "success"
+      });
 
       updateProfile(auth.currentUser, {
         displayName: name,
@@ -75,7 +80,7 @@ const Register = () => {
              name="username"
              id="username"
              placeholder="Username"
-             className="w-full lg:px-2  py-3 rounded-md  border-gray-700 border-opacity-30 bg-white opacity-90  focus:border-violet-400"
+             className="w-full lg:px-2  py-3 rounded-md   border-2 border-solid border-gray-300 bg-white opacity-90  focus:border-violet-400"
              {...register("Username", { required: true })}
              aria-invalid={errors.Username ? "true" : "false"}
           
@@ -93,7 +98,7 @@ const Register = () => {
              name="email"
              id="email"
              placeholder="Your Email"
-             className="w-full lg:px-2  py-3 rounded-md  border-gray-700 border-opacity-30 bg-white opacity-90  focus:border-violet-400"
+             className="w-full lg:px-2  py-3 rounded-md  border-2 border-solid border-gray-300 bg-white opacity-90  focus:border-violet-400"
              {...register("mail", { required: "Email Address is required" })}
              aria-invalid={errors.mail ? "true" : "false"}
            
@@ -109,7 +114,7 @@ const Register = () => {
              name="photo"
              id="photo"
              placeholder="https://"
-             className="w-full lg:px-2  py-3 rounded-md  border-gray-700 border-opacity-30 bg-white opacity-90  focus:border-violet-400"
+             className="w-full lg:px-2  py-3 rounded-md  border-2 border-solid border-gray-300 bg-white opacity-90  focus:border-violet-400"
            
              {...register("photo", { required: "photo url is required" })}
              aria-invalid={errors.photo ? "true" : "false"}
@@ -126,24 +131,24 @@ const Register = () => {
              name="password"
              id="password"
              placeholder="Password"
-             className="w-full lg:px-2 py-3 rounded-md  border-blue-600 border-opacity-30  focus:border-violet-400"
+             className="w-full lg:px-2 py-3 rounded-md  border-2 border-solid border-gray-300 focus:border-violet-400"
            
              {...register("password", { required: "password is required" })}
              aria-invalid={errors.password ? "true" : "false"}
             
            />
-           <p onClick={()=>setShowPass(!showpass)} className="absolute top-0 right-0 cursor-pointer" >{
-            showpass && <VscEyeClosed></VscEyeClosed> || <RxEyeOpen></RxEyeOpen>
+           <p onClick={()=>setShowPass(!showpass)} className="absolute top-3 right-4 cursor-pointer" >{
+            showpass && <VscEyeClosed size={20}></VscEyeClosed> || <RxEyeOpen size={20}></RxEyeOpen>
            }</p>
            </div>
             {errors.password && <p className="text-red-500" role="alert">{errors.password.message}</p>}
            <div className="flex justify-end text-xs text-gray-400">
-             <a className="text-blue-600" rel="noopener noreferrer" href="#">
+             <a className="text-green-400" rel="noopener noreferrer" href="#">
                Forgot Password?
              </a>
            </div>
          </div>
-         <button className="block w-full p-3 text-center rounded-sm bg-blue-600 border-none text-white">
+         <button className="block w-full p-3 text-center font-bold rounded-sm bg-green-500 border-none text-white">
            Register
          </button>
        </form>
@@ -154,7 +159,7 @@ const Register = () => {
          <Link to={'/login'}
            rel="noopener noreferrer"
            href="#"
-           className="underline text-blue-600 font-bold"
+           className="underline text-green-500 font-bold"
          >
            Login
          </Link>
