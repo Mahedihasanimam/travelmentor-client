@@ -9,6 +9,9 @@ import {
 
 import Mainlayout from './layout/Mainlayout';
 import Home from './pages/Home';
+import AddTourist from './pages/AddTourist';
+import AllTourists from './pages/AllTourists';
+import MyList from './pages/MyList';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +20,18 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>
+      },
+      {
+        path:'/addtourists',
+        element:<AddTourist></AddTourist>
+      },
+      {
+        path:'/alltourists',
+        element:<AllTourists></AllTourists>
+      },
+      {
+        path:'/mylist',
+        element:<MyList></MyList>
       }
     ]
   },

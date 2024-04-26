@@ -18,8 +18,8 @@ const Navbar = () => {
           to={"/"}
           className={({ isActive }) =>
             isActive
-              ? "text-[#FF5A3D] bg-gray-300 no-underline"
-              : " text-black no-underline"
+              ? "text-yellow-400 bg-gray-100 no-underline font-bold"
+              : " text-black no-underline font-bold"
           }
         >
           {" "}
@@ -31,8 +31,8 @@ const Navbar = () => {
           to={"/alltourists"}
           className={({ isActive }) =>
             isActive
-              ? "text-[#FF5A3D] bg-gray-300 no-underline"
-              : " text-black no-underline"
+              ? "text-yellow-400 bg-gray-100 no-underline font-bold"
+              : " text-black no-underline font-bold"
           }
         >
           {" "}
@@ -45,8 +45,8 @@ const Navbar = () => {
           to={"/addtourists"}
           className={({ isActive }) =>
             isActive
-              ? "text-[#FF5A3D] bg-gray-300 no-underline"
-              : " text-black no-underline"
+              ? "text-yellow-400 bg-gray-100 no-underline font-bold"
+              : " text-black no-underline font-bold"
           }
         >
           {" "}
@@ -59,8 +59,8 @@ const Navbar = () => {
           to={"/mylist"}
           className={({ isActive }) =>
             isActive
-              ? "text-[#FF5A3D] bg-gray-300 no-underline"
-              : " text-black no-underline"
+              ? "text-yellow-400 bg-gray-300 no-underline font-bold"
+              : " text-black no-underline font-bold"
           }
         >
           {" "}
