@@ -17,14 +17,18 @@ import  { Toaster } from 'react-hot-toast';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import PrivateRoute from './Route/PrivateRoute';
+import Errorpage from './pages/Errorpage';
+import CardDetails from './pages/CardDetails';
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:<Errorpage></Errorpage>,
     element:<Mainlayout></Mainlayout>,
     children:[
       {
         path:'/',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:()=>fetch('http://localhost:5000/addtourists')
       },
       {
         path:'/addtourists',
@@ -32,11 +36,17 @@ const router = createBrowserRouter([
       },
       {
         path:'/alltourists',
-        element:<AllTourists></AllTourists>
+        element:<AllTourists></AllTourists>,
+        loader:()=>fetch('http://localhost:5000/addtourists')
       },
       {
         path:'/mylist',
         element:<PrivateRoute><MyList></MyList></PrivateRoute>
+      },
+      {
+        path:'/details/:id',
+        element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/alltourists/details/${params.id}`)
       },
       {
         path:'/login',

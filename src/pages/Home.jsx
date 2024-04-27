@@ -1,13 +1,25 @@
+import { useLoaderData } from "react-router-dom";
 import SwiperSlider from "../components/SwiperSlider";
+import TouristCard from "../components/TouristCard";
 
 
 
 
 const Home = () => {
+    const tourist=useLoaderData();
+    console.log(tourist)
+  
     return (
         <div>
            <SwiperSlider></SwiperSlider>
-            {/* <img className="w-full" src="https://r2.easyimg.io/ms5dhceow/111.jpg" alt="" /> */}
+           <div>
+           <h1 className="text-4xl font-bold text-center mt-16 mb-8 border-b-4 pb-2  w-fit border-solid border-green-500">Tourists Spots</h1>
+            <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
+            {
+                tourist.slice(0,6).map(item=><TouristCard item={item} key={item._id}></TouristCard>)
+            }
+            </div>
+        </div>
         </div>
     );
 };
