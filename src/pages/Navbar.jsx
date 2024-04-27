@@ -120,7 +120,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{NavigateItem}</ul>
       </div>
       <div className="navbar-end ">
-        <div className="dropdown dropdown-end">
+        <div className="dropdown dropdown-hover dropdown-end">
           <div
             tabIndex={0}
             role="button"
@@ -141,7 +141,7 @@ const Navbar = () => {
               )}
               <ReactTooltip
                 anchorId="userbtn"
-                place="top"
+                place="top right"
                 content={user?.displayName || "no name found"}
               />
             </div>

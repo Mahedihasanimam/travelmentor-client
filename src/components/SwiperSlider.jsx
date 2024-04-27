@@ -53,10 +53,12 @@ const SwiperSlider = () => {
                 Your expert guide in tourism management, offering insights,
                 tips, and tools for seamless travel experiences
               </p>
-              <button className="btn px-8 bg-yellow-400 hover:bg-yellow-300 border-none rounded-sm  text-white font-bold" data-aos="fade-up"
+             <a href="#tourist">
+             <button className="btn px-8 bg-yellow-400 hover:bg-yellow-300 border-none rounded-sm  text-white font-bold" data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom">
                 Lern more
               </button>
+             </a>
             </div>
           </div>
         </SwiperSlide>
@@ -82,9 +84,11 @@ const SwiperSlider = () => {
               <p className="font-semibold lg:text-lg text-sm">
               Empowering your journey with tailored advice, curated recommendations, and resources for enriching tourism management
               </p>
+              <a href="#tourist">
               <button className="btn px-8 bg-yellow-400 hover:bg-yellow-300 border-none rounded-sm  text-white font-bold">
                 Lern more
               </button>
+              </a>
             </div>
           </div>
         </SwiperSlide>

@@ -44,19 +44,19 @@ console.log()
   };
     return (
         <div>
-        <section className="p-6 bg-gradient bg-cover  dark:text-gray-900 text-start">
+        <section className="p-6 bg-gray-100  bg-cover text-black text-opacity-50 dark:text-gray-900 text-start">
           <form
             onSubmit={handleAdd}
             className="container flex flex-col mx-auto space-y-12"
           >
             <fieldset className=" gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
               <div className="space-y-2 col-span-full lg:col-span-1">
-                <p className=" text-white text-4xl font-bold p-6 text-center">Add Tourists Spot</p>
+                <p className="  text-4xl font-bold mb-12 text-[#305992] text-center">Add Tourists Spot</p>
               
               </div>
               <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                 <div className="col-span-full sm:col-span-3">
-                  <label htmlFor="name" className="text-sm text-white">
+                  <label htmlFor="name" className="text-sm font-bold">
                     Tourist Sport Name
   
                   </label>
@@ -70,7 +70,7 @@ console.log()
                   />
                 </div>
                 <div className="col-span-full sm:col-span-3">
-                  <label htmlFor="country" className="text-sm text-white">
+                  <label htmlFor="country" className="text-sm font-bold">
                   country_Name
                   </label>
                   <input
@@ -83,7 +83,7 @@ console.log()
                   />
                 </div>
                 <div className="col-span-full sm:col-span-3">
-                  <label htmlFor="cost" className="text-sm text-white">
+                  <label htmlFor="cost" className="text-sm font-bold">
                   average_cost
                   </label>
                   <input
@@ -96,7 +96,7 @@ console.log()
                   />
                 </div>
                 <div className="col-span-full sm:col-span-3">
-                  <label htmlFor="seasonality" className="text-sm text-white">
+                  <label htmlFor="seasonality" className="text-sm font-bold">
                   seasonality
                   </label>
                   <input
@@ -109,7 +109,7 @@ console.log()
                   />
                 </div>
                 <div className="col-span-full sm:col-span-3">
-                  <label htmlFor="travel_time" className="text-sm text-white">
+                  <label htmlFor="travel_time" className="text-sm font-bold">
                   travel_time
                   </label>
                   <input
@@ -122,7 +122,7 @@ console.log()
                   />
                 </div>
                 <div className="col-span-full sm:col-span-3">
-                  <label htmlFor="location" className="text-sm text-white">
+                  <label htmlFor="location" className="text-sm font-bold">
                    Location
                   </label>
                   <input
@@ -135,7 +135,7 @@ console.log()
                   />
                 </div>
                 <div className="col-span-full sm:col-span-3">
-                  <label htmlFor="photo" className="text-sm text-white">
+                  <label htmlFor="photo" className="text-sm font-bold">
                    photo
                   </label>
                   <input
@@ -150,7 +150,7 @@ console.log()
               
                
                 <div className="col-span-full sm:col-span-3">
-                  <label htmlFor="totaVisitorsPerYear" className="text-sm text-white">
+                  <label htmlFor="totaVisitorsPerYear" className="text-sm font-bold">
                   totaVisitorsPerYear
                   </label>
                   <input
@@ -163,7 +163,7 @@ console.log()
                   />
                 </div>
                 <div className="col-span-full">
-                  <label htmlFor="city" className="text-sm text-white">
+                  <label htmlFor="city" className="text-sm font-bold">
                   description
                   </label>
                   <textarea

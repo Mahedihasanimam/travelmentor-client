@@ -1,25 +1,27 @@
 import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { FaStar } from "react-icons/fa";
+
 const TouristCard = ({item}) => {
-    const {name, location, photo, review, details,_id}=item;
+    const {name, location, photo, details,country,travelTime,cost,seasonality,totaVisitorsPerYear,_id}=item;
     return (
         <Link className="no-underline"  to={`/details/${_id}`}>
         <div className="" data-aos="fade-up" data-aos-duration="1000">
           <div className="card card-compact text-black  min-h-[550px] bg-base-100 border-2 border-solid border-gray-200 shadow-lg  hover:shadow-2xl">
             <img className="p-4 rounded-3xl " src={photo} alt="Home"  data-aos="zoom-in"
                   data-aos-duration="1000"/>
-          
+            <strong className="absolute top-5 right-5 bg-green-600 text-white font-bold px-2">{travelTime}</strong>
             <div className="card-body" data-aos="zoom-in"
                   data-aos-duration="2000">
                     <div className="flex justify-between">
                         <h2 className="card-title">{name}</h2>
-                        <strong className="flex gap-1 items-center"><FaStar className="text-orange-300" size={20} />{review}</strong>
+                        <strong className="flex gap-1 items-center text-green-600 text-xl font-extrabold">{cost}</strong>
                     </div>
               <strong  className="flex items-center gap-1"> <CiLocationOn className="text-green-600" size={20}></CiLocationOn> {location}</strong>
               <p className="no-underline font-semibold opacity-70 ">
                 {details.slice(0, 200)}...
               </p>
+              
               <div className="card-actions ">
                 <Link
                   to={`/details/${_id}`}
