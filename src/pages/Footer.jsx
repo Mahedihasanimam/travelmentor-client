@@ -19,7 +19,7 @@ const Footer = () => {
                 <img src="/public/[FREE - HDconvert.com] Untitled design (4).png" alt="" />
                 </span>
               </a>
-              <p className="opacity-70 ">
+              <p className="opacity-70 pr-12">
               Your companion for unforgettable journeys, offering guidance, inspiration, and tips to make your travel experiences extraordinary and seamless.
               </p>
               <div className="space-y-3">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
-import { FaStar } from "react-icons/fa";
+
 
 const TouristCard = ({item}) => {
     const {name, location, photo, details,country,travelTime,cost,seasonality,totaVisitorsPerYear,_id}=item;
