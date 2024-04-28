@@ -46,7 +46,7 @@ const router = createBrowserRouter([
       {
         path:'/details/:id',
         element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
+        loader:({params})=>fetch(`http://localhost:5000/addtourists/${params.id}`)
       },
       {
         path:'/login',
