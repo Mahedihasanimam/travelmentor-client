@@ -19,6 +19,7 @@ import Register from './pages/Register';
 import PrivateRoute from './Route/PrivateRoute';
 import Errorpage from './pages/Errorpage';
 import CardDetails from './pages/CardDetails';
+import UpdateTourist from './pages/UpdateTourist';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         path:'/mylist',
         element:<PrivateRoute><MyList></MyList></PrivateRoute>,
     
+      },
+      {
+        path:'/updatetourist',
+        element:<PrivateRoute><UpdateTourist></UpdateTourist></PrivateRoute>
       },
       {
         path:'/details/:id',

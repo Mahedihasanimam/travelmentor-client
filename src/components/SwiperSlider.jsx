@@ -5,11 +5,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+
+ 
+//importing typewriter-effect
+
+
 // ..
 AOS.init();
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useRef } from "react";
+
 
 const SwiperSlider = () => {
   const progressCircle = useRef(null);
@@ -45,20 +52,22 @@ const SwiperSlider = () => {
             <div className="bg-black opacity-15 w-full h-full absolute top-0">
 
             </div>
-            <div className="lg:top-[20%] md:top-[20%] top-[10%] md:w-1/2 md:left-12 left-4 absolute md:space-y-4 space-y-1 text-white" >
+            <div className="lg:top-[20%] md:top-[20%] top-[10%] md:w-1/2 md:left-12 left-4 absolute md:space-y-4 space-y-2 text-white" >
+              
               <h1 className="font-bold md:text-6xl" data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">welcome to <span className="text-yellow-300">travelmentor</span></h1>
-              <p className="font-semibold lg:text-lg text-sm">
+              <p className="font-semibold lg:text-lg text-sm ">
                 Your expert guide in tourism management, offering insights,
                 tips, and tools for seamless travel experiences
               </p>
              <a href="#tourist">
-             <button className="btn px-8 bg-yellow-400 hover:bg-yellow-300 border-none rounded-sm  text-white font-bold" data-aos="fade-up"
+             <button className="btn px-8 lg:mt-4  bg-yellow-400 hover:bg-yellow-300 border-none rounded-sm  text-white font-bold" data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom">
                 Lern more
               </button>
              </a>
+            
             </div>
           </div>
         </SwiperSlide>
@@ -85,7 +94,7 @@ const SwiperSlider = () => {
               Empowering your journey with tailored advice, curated recommendations, and resources for enriching tourism management
               </p>
               <a href="#tourist">
-              <button className="btn px-8 bg-yellow-400 hover:bg-yellow-300 border-none rounded-sm  text-white font-bold">
+              <button className="btn px-8 mt-4 bg-yellow-400 hover:bg-yellow-300 border-none rounded-sm  text-white font-bold">
                 Lern more
               </button>
               </a>

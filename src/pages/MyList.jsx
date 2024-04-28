@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Authprovidfer/AuthProvider";
 import { MdModeEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 const MyList = () => {
   const { user } = useContext(AuthContext);
 
@@ -16,6 +18,34 @@ const MyList = () => {
         console.log(data);
       });
   }, [user?.email]);
+  const handleDelete = (_id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/details/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deleteCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+            }
+    
+          });
+      }
+    });
+  };
   return (
     <div>
       <div className="overflow-x-auto">
@@ -52,10 +82,19 @@ const MyList = () => {
                 <td>
                   {" "}
                   <th>
-                    <button className="btn bg-green-600 hover:bg-green-600 text-white font-bold"><MdModeEdit size={25}/> </button>
+                    <Link to={'/updatetourist'}>
+                    <button className="btn bg-green-600 hover:bg-green-600 text-white font-bold">
+                      <MdModeEdit size={25} />{" "}
+                    </button>
+                    </Link>
                   </th>
                   <th>
-                  <button  className="btn bg-yellow-500 hover:bg-yellow-300 text-white font-bold"><MdDelete size={25}/> </button>
+                    <button
+                      onClick={() => handleDelete(item._id)}
+                      className="btn bg-yellow-500 hover:bg-yellow-300 text-white font-bold"
+                    >
+                      <MdDelete size={25} />{" "}
+                    </button>
                   </th>
                 </td>
               </tr>
