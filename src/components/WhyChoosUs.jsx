@@ -12,7 +12,7 @@ const WhyChoosUs = () => {
           Why Travelmentor Is Best ?
         </h1>
         <div className="container mx-auto  grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <div  className="flex md:flex-row lg:flex-row bg-green-600 text-white shadow-lg gap-4 items-center p-4 border-2 border-solid border-gray-100 rounded-xl">
+          <div  className="flex  md:flex-row lg:flex-row bg-green-600 text-white shadow-lg gap-4 items-center p-4 border-2 border-solid border-gray-100 rounded-xl">
             <div>
                 < MdOutlineSupportAgent id="icon" className="text-white" size={70}/>
             </div>
@@ -28,7 +28,7 @@ const WhyChoosUs = () => {
             </div>
            </div>
           </div>
-          <div className="flex shadow-lg  gap-4 items-center p-2 border-2 border-solid border-gray-100 rounded-xl">
+          <div className="flex shadow-lg  hover:shadow-2xl  gap-4 items-center p-2 border-2 border-solid border-gray-100 rounded-xl">
             <div>
                 < TbChartAreaLineFilled className="text-green-600" size={70}/>
             </div>
@@ -43,7 +43,7 @@ const WhyChoosUs = () => {
             </div>
            </div>
           </div>
-          <div className="flex  gap-4 items-center shadow-lg p-4 border-2 border-solid border-gray-100 rounded-xl">
+          <div className="flex   hover:shadow-2xl gap-4 items-center shadow-lg p-4 border-2 border-solid border-gray-100 rounded-xl">
             <div>
                 < FaHandHoldingHeart className="text-green-600" size={70}/>
             </div>
@@ -58,7 +58,7 @@ const WhyChoosUs = () => {
             </div>
            </div>
           </div>
-          <div className="flex  gap-4 items-center p-4 shadow-lg border-2 border-solid border-gray-100 rounded-xl">
+          <div className="flex   hover:shadow-2xl gap-4 items-center p-4 shadow-lg border-2 border-solid border-gray-100 rounded-xl">
             <div>
                 < FaRegCalendarAlt className="text-green-600" size={70}/>
             </div>
@@ -73,7 +73,7 @@ const WhyChoosUs = () => {
             </div>
            </div>
           </div>
-          <div className="flex  gap-4 items-center p-4 shadow-lg border-2 border-solid border-gray-100 rounded-xl">
+          <div className="flex  hover:shadow-2xl gap-4 items-center p-4 shadow-lg border-2 border-solid border-gray-100 rounded-xl">
             <div>
                 < FcProcess className="text-green-600" size={70}/>
             </div>
@@ -88,7 +88,7 @@ const WhyChoosUs = () => {
             </div>
            </div>
           </div>
-          <div className="flex  gap-4 items-center p-2 border-2 border-solid border-gray-100 rounded-xl">
+          <div className="flex  hover:shadow-2xl gap-4 items-center p-2 border-2 border-solid border-gray-100 rounded-xl">
             <div>
                 < FcCustomerSupport className="text-green-600" size={70}/>
             </div>

@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="px-4  divide-y bg-[#181C2B] text-gray-100">
+        <footer className="px-4 mt-40  divide-y bg-[#181C2B] text-gray-100">
         <div className="max-w-[1440px] mx-auto pl-4">
           <div className="container  flex flex-col justify-between py-10  space-y-8 lg:flex-row lg:space-y-0" >
-            <div className="lg:w-1/3 line-clamp-4" data-aos="fade-up"
+            <div className="lg:w-1/3 line-clamp-4 space-y-6" data-aos="fade-up"
        data-aos-duration="1000">
               <a
                 rel="noopener noreferrer"
@@ -20,22 +20,20 @@ const Footer = () => {
                 </span>
               </a>
               <p className="opacity-70 ">
-                DreamDwellings offers luxurious, modern homes <br />
-                that blend comfort, style, and innovation for <br />
-                discerning homeowners worldwide.
+              Your companion for unforgettable journeys, offering guidance, inspiration, and tips to make your travel experiences extraordinary and seamless.
               </p>
               <div className="space-y-3">
                 <div className="flex justify-start space-x-3 ">
                   <FaFacebook
-                    className="hover:text-red-500 cursor-pointer"
+                    className="hover:text-green-500 cursor-pointer"
                     size={20}
                   />
                   <FaTwitter
-                    className="hover:text-red-500 cursor-pointer"
+                    className="hover:text-green-500 cursor-pointer"
                     size={20}
                   />
                   <FaLinkedin
-                    className="hover:text-red-500 cursor-pointer"
+                    className="hover:text-green-500 cursor-pointer"
                     size={20}
                   />
                 </div>
@@ -47,42 +45,36 @@ const Footer = () => {
                 <h3 className="tracking-wide uppercase text-gray-50">
                   Quick links
                 </h3>
-                <ul className="space-y-1 list-none">
-                  <li className="hover:text-red-500">
+                <ul className=" list-none space-y-3">
+                  <li className="text-green-500 flex items-center">
                     <FaArrowRight className="mr-1 font-bold" />{" "}
                     <Link className="text-white no-underline opacity-70" to={"/"}>
                       {" "}
                       Home
                     </Link>
-                  </li>
-                  <li className="hover:text-red-500">
-                    <FaArrowRight className="mr-1" />{" "}
-                    <Link
-                      className="text-white no-underline opacity-70"
-                      to={"/user"}
-                    >
-                      user Profile
+                  </li>        
+                  <li className="hover:text-green-500 flex items-center">
+                    <FaArrowRight className="mr-1 font-bold" />{" "}
+                    <Link className="text-white no-underline opacity-70" to={"/alltourists"}>
+                      {" "}
+                     Alltourists
                     </Link>
-                  </li>
-                  <li className="hover:text-red-500">
-                    <FaArrowRight className="mr-1" />{" "}
-                    <Link
-                      className="text-white no-underline opacity-70"
-                      to={"/profile"}
-                    >
-                      Update profile
+                  </li>        
+                  <li className="hover:text-green-500 flex items-center">
+                    <FaArrowRight className="mr-1 font-bold" />{" "}
+                    <Link className="text-white no-underline opacity-70" to={"/addtourists"}>
+                      {" "}
+                     addtourists
                     </Link>
-                  </li>
-                  <li className="hover:text-red-500">
-                    <FaArrowRight className="mr-1" />{" "}
-                    <Link
-                      className="text-white no-underline opacity-70"
-                      to={"/contact"}
-                    >
-                      contact
+                  </li>        
+                  <li className="hover:text-green-500 flex items-center">
+                    <FaArrowRight className="mr-1 font-bold" />{" "}
+                    <Link className="text-white no-underline opacity-70" to={"/mylist"}>
+                      {" "}
+                     mylists
                     </Link>
-                  </li>
-                  <li className="hover:text-red-500">
+                  </li>        
+                  <li className="hover:text-green-500 flex items-center">
                     <FaArrowRight className="mr-1" />{" "}
                     <Link
                       className="text-white no-underline opacity-70"
@@ -91,7 +83,7 @@ const Footer = () => {
                       Login
                     </Link>
                   </li>
-                  <li className="hover:text-red-500">
+                  <li className="hover:text-green-500 flex items-center">
                     <FaArrowRight className="mr-1" />{" "}
                     <Link
                       className="text-white no-underline opacity-70"
@@ -105,20 +97,20 @@ const Footer = () => {
               <div className="space-y-3" data-aos="fade-up"
        data-aos-duration="2000">
                 <h3 className="tracking-wide uppercase text-gray-50">Services</h3>
-                <ul className="space-y-1 list-none">
-                  <li className="hover:text-red-500 ">
+                <ul className="space-y-4 list-none ">
+                  <li className="hover:text-green-500 flex items-center">
                     <FaArrowRight className="mr-1" />{" "}
                     <Link className="text-white no-underline opacity-70">
-                      Rent
+                      Blog
                     </Link>
                   </li>
-                  <li className="hover:text-red-500">
+                  <li className="hover:text-green-500 flex items-center">
                     <FaArrowRight className="mr-1" />{" "}
                     <Link className="text-white no-underline opacity-70">
-                      Sale
+                     Travel
                     </Link>
                   </li>
-                  <li className="hover:text-red-500">
+                  <li className="hover:text-green-500 flex items-center">
                     <FaArrowRight className="mr-1" />{" "}
                     <Link className="text-white no-underline opacity-70">
                       Booking
@@ -130,19 +122,19 @@ const Footer = () => {
        data-aos-duration="2500">
                 <h3 className="uppercase text-gray-50">Contact Us</h3>
                 <ul className="space-y-1 list-none">
-                  <li className="hover:text-red-500">
+                  <li className="hover:text-green-500 flex items-center">
                     <CiLocationOn className="mr-1" />{" "}
                     <Link className="text-white no-underline opacity-70">
-                      San Francisco, California, United States
+                      mymensingh,dhaka,bangladesh
                     </Link>
                   </li>
-                  <li className="hover:text-red-500">
+                  <li className="hover:text-green-500">
                     <MdAddCall className="mr-1" />{" "}
                     <Link className="text-white no-underline opacity-70">
                       +1 (415) 555-1234
                     </Link>
                   </li>
-                  <li className="hover:text-red-500">
+                  <li className="hover:text-green-500">
                     <MdOutlineMail className="mr-1" />{" "}
                     <Link className="text-white no-underline opacity-70">
                       jdoe@example.com
@@ -152,8 +144,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          <hr />
           <div className="py-6 text-sm text-center text-gray-400">
-            © DreamDwellings. All rights reserved.
+            © Travelmentor. All rights reserved.developer mahedi
           </div>
         </div>
       </footer>
