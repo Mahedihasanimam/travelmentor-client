@@ -3,6 +3,7 @@ import SwiperSlider from "../components/SwiperSlider";
 import TouristCard from "../components/TouristCard";
 import Gellary from "../components/Gellary";
 import WhyChoosUs from "../components/WhyChoosUs";
+import Countries from "../components/Countries";
 
 
 
@@ -27,8 +28,9 @@ const Home = () => {
          <Gellary></Gellary>
          </div>
          <div>
-        
+        <Countries></Countries>
          <WhyChoosUs></WhyChoosUs>
+         
          </div>
         </div>
         </div>

@@ -49,7 +49,7 @@ const UpdateTourist = () => {
       totaVisitorsPerYear,
     };
     console.log(updateTouristInfo);
-    fetch(`http://localhost:5000/addtourists/${_id}`, {
+    fetch(`https://travelmentor-server.vercel.app/addtourists/${_id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updateTouristInfo),
