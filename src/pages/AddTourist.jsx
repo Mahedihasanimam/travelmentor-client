@@ -44,7 +44,7 @@ console.log()
   };
     return (
         <div>
-        <section className="p-6 bg-gray-100  bg-cover text-black text-opacity-50 dark:text-gray-900 text-start">
+        <section className="p-6   bg-cover  text-opacity-50 dark:text-gray-900 text-start">
           <form
             onSubmit={handleAdd}
             className="container flex flex-col mx-auto space-y-12"
@@ -54,7 +54,7 @@ console.log()
                 <p className="  text-4xl font-bold mb-12 text-[#305992] text-center">Add Tourists Spot</p>
               
               </div>
-              <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+              <div className="grid  grid-cols-6 gap-4 col-span-full lg:col-span-3">
                 <div className="col-span-full sm:col-span-3">
                   <label htmlFor="name" className="text-sm font-bold">
                     Tourist Sport Name

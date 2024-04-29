@@ -68,7 +68,7 @@ const UpdateTourist = () => {
   };
   return (
     <div>
-      <section className="p-6 bg-gray-100  bg-cover text-black text-opacity-50 dark:text-gray-900 text-start">
+      <section className="p-6 bg-gray-100  bg-cover  text-opacity-50 dark:text-gray-900 text-start">
         <form
           onSubmit={handleUpdateTourist}
           className="container flex flex-col mx-auto space-y-12"
@@ -79,7 +79,7 @@ const UpdateTourist = () => {
                 Update Tourists Spot
               </p>
             </div>
-            <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+            <div className="grid  grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="name" className="text-sm font-bold">
                   Tourist Sport Name

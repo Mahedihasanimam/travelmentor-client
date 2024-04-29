@@ -77,7 +77,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar px-4 fixed bg-white opacity-90  z-50 max-w-[1440px] mx-auto  top-0 shadow-sm">
+    <div className="navbar px-4 fixed bg-white dark:bg-transparent opacity-90  z-50  mx-auto  top-0 shadow-sm">
       <div className="navbar-start">
         <div className="dropdown">
           <div className="md:hidden pr-2" onClick={() => setopen(!open)}>

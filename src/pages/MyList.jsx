@@ -65,7 +65,7 @@ const MyList = () => {
           </thead>
           <tbody>
             {myList.map((item) => (
-              <tr key={item._id} className="odd:bg-gray-200">
+              <tr key={item._id} className="odd:bg-gray-200 odd:text-black">
                 <td>
                   <img
                     className="mask rounded-md mask-half-2 w-12 h-12"

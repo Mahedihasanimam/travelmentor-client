@@ -7,7 +7,7 @@ const TouristCard = ({item}) => {
     return (
         <Link className="no-underline"  to={`/details/${_id}`}>
         <div className="" data-aos="fade-up" data-aos-duration="1000">
-          <div className="card card-compact text-black  min-h-[550px] bg-base-100 border-2 border-solid border-gray-200 shadow-lg  hover:shadow-2xl">
+          <div className="card card-compact   min-h-[550px] bg-base-100 border-2 border-solid border-gray-200 shadow-lg  hover:shadow-2xl">
             <img className="p-4 rounded-3xl " src={photo} alt="Home"  data-aos="zoom-in"
                   data-aos-duration="1000"/>
             <strong className="absolute top-5 right-5 bg-green-600 text-white font-bold px-2">{travelTime}</strong>
