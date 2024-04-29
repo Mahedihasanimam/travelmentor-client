@@ -20,6 +20,7 @@ import PrivateRoute from './Route/PrivateRoute';
 import Errorpage from './pages/Errorpage';
 import CardDetails from './pages/CardDetails';
 import UpdateTourist from './pages/UpdateTourist';
+import CountryDetails from './pages/CountryDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
         path:'/details/:id',
         element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
         loader:({params})=>fetch(`https://travelmentor-server.vercel.app/details/${params.id}`)
+      },
+      {
+        path:'/countrys/:country',
+        element:<PrivateRoute><CountryDetails></CountryDetails></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/countrys/${params.country}`)
       },
       {
         path:'/login',
