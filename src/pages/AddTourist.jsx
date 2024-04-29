@@ -31,14 +31,14 @@ console.log()
   })
   .then(res=>res.json())
   .then(data=>{
-    if(data.acknowledged){
-      Swal.fire({
-        title: "Tourists Spot added succesfully!!",
-        icon: "success"
+    // if(data.acknowledged){
+    //   Swal.fire({
+    //     title: "Tourists Spot added succesfully!!",
+    //     icon: "success"
 
-      });
-      form.reset()
-    }
+    //   });
+    //   form.reset()
+    // }
     console.log(data)
   })
   };

@@ -3,8 +3,9 @@ import { AuthContext } from "../Authprovidfer/AuthProvider";
 import { MdModeEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 const MyList = () => {
+
   const { user } = useContext(AuthContext);
 
   const [myList, setMylist] = useState([]);
@@ -34,7 +35,7 @@ const MyList = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            if (data.deleteCount > 0) {
+            if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",
                 text: "Your file has been deleted.",
@@ -82,7 +83,7 @@ const MyList = () => {
                 <td>
                   {" "}
                   <th>
-                    <Link to={'/updatetourist'}>
+                    <Link to={`/updatetourist/${item._id}`}>
                     <button className="btn bg-green-600 hover:bg-green-600 text-white font-bold">
                       <MdModeEdit size={25} />{" "}
                     </button>
