@@ -24,27 +24,27 @@ console.log()
     const userName=user.user.displayName;
     const touristinfo = { name, location, photo, details,email,userName,country,travelTime,cost,seasonality,totaVisitorsPerYear};
     console.log(touristinfo);
-      fetch('http://localhost:5000/addtourists',{
+      fetch('https://travelmentor-server.vercel.app/addtourists',{
       method:'POST',
       headers:{'content-type':'application/json'},
       body:JSON.stringify(touristinfo)
   })
   .then(res=>res.json())
   .then(data=>{
-    // if(data.acknowledged){
-    //   Swal.fire({
-    //     title: "Tourists Spot added succesfully!!",
-    //     icon: "success"
+    if(data.acknowledged){
+      Swal.fire({
+        title: "Tourists Spot added succesfully!!",
+        icon: "success"
 
-    //   });
-    //   form.reset()
-    // }
+      });
+      form.reset()
+    }
     console.log(data)
   })
   };
     return (
         <div>
-        <section className="p-6   bg-cover  text-opacity-50 dark:text-gray-900 text-start">
+        <section className="p-6 bg-gray-100  bg-cover  text-opacity-50 dark:text-gray-900 text-start">
           <form
             onSubmit={handleAdd}
             className="container flex flex-col mx-auto space-y-12"
@@ -54,7 +54,7 @@ console.log()
                 <p className="  text-4xl font-bold mb-12 text-[#305992] text-center">Add Tourists Spot</p>
               
               </div>
-              <div className="grid  grid-cols-6 gap-4 col-span-full lg:col-span-3">
+              <div className="grid text-black grid-cols-6 gap-4 col-span-full lg:col-span-3">
                 <div className="col-span-full sm:col-span-3">
                   <label htmlFor="name" className="text-sm font-bold">
                     Tourist Sport Name
@@ -72,15 +72,15 @@ console.log()
                 <div className="col-span-full sm:col-span-3">
                   <label htmlFor="country" className="text-sm font-bold">
                   country_Name
-                  </label>
-                  <input
-                    id="country"
-                    type="text"
-                    name="country"
-                    placeholder="country Name"
-                    required
-                    className="w-full  p-2 rounded-sm focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  />
+                  </label><br />
+                  <select name="country" id="" className="w-full  p-2 rounded-sm focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300">
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Cambodia">Cambodia</option>
+                  </select>
                 </div>
                 <div className="col-span-full sm:col-span-3">
                   <label htmlFor="cost" className="text-sm font-bold">

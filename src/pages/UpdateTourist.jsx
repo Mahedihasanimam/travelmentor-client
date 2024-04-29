@@ -81,7 +81,7 @@ const UpdateTourist = () => {
             </div>
             <div className="grid  grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full sm:col-span-3">
-                <label htmlFor="name" className="text-sm font-bold">
+                <label htmlFor="name" className="text-sm font-bold text-black">
                   Tourist Sport Name
                 </label>
                 <input
@@ -94,7 +94,7 @@ const UpdateTourist = () => {
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
-                <label htmlFor="country" className="text-sm font-bold">
+                <label htmlFor="country" className="text-sm font-bold text-black">
                   country_Name
                 </label>
                 <input
@@ -107,7 +107,7 @@ const UpdateTourist = () => {
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
-                <label htmlFor="cost" className="text-sm font-bold">
+                <label htmlFor="cost" className="text-sm font-bold text-black">
                   average_cost
                 </label>
                 <input
@@ -120,7 +120,7 @@ const UpdateTourist = () => {
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
-                <label htmlFor="seasonality" className="text-sm font-bold">
+                <label htmlFor="seasonality" className="text-sm font-bold text-black">
                   seasonality
                 </label>
                 <input
@@ -133,7 +133,7 @@ const UpdateTourist = () => {
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
-                <label htmlFor="travel_time" className="text-sm font-bold">
+                <label htmlFor="travel_time" className="text-sm font-bold text-black">
                   travel_time
                 </label>
                 <input
@@ -146,7 +146,7 @@ const UpdateTourist = () => {
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
-                <label htmlFor="location" className="text-sm font-bold">
+                <label htmlFor="location" className="text-sm font-bold text-black">
                   Location
                 </label>
                 <input
@@ -159,7 +159,7 @@ const UpdateTourist = () => {
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
-                <label htmlFor="photo" className="text-sm font-bold">
+                <label htmlFor="photo" className="text-sm font-bold text-black">
                   photo
                 </label>
                 <input
@@ -175,7 +175,7 @@ const UpdateTourist = () => {
               <div className="col-span-full sm:col-span-3">
                 <label
                   htmlFor="totaVisitorsPerYear"
-                  className="text-sm font-bold"
+                  className="text-sm font-bold text-black"
                 >
                   totaVisitorsPerYear
                 </label>

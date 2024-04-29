@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3" data-aos="fade-up"
        data-aos-duration="1500">
               <div className="space-y-3">
-                <h3 className="tracking-wide uppercase text-gray-50">
+                <h3 className="tracking-wide uppercase text-gray-50 font-bold">
                   Quick links
                 </h3>
                 <ul className=" list-none space-y-3">
@@ -96,7 +96,7 @@ const Footer = () => {
               </div>
               <div className="space-y-3" data-aos="fade-up"
        data-aos-duration="2000">
-                <h3 className="tracking-wide uppercase text-gray-50">Services</h3>
+                <h3 className="tracking-wide uppercase text-gray-50 font-bold">Services</h3>
                 <ul className="space-y-4 list-none ">
                   <li className="hover:text-green-500 flex items-center">
                     <FaArrowRight className="mr-1" />{" "}
@@ -120,21 +120,21 @@ const Footer = () => {
               </div>
               <div className="space-y-3" data-aos="fade-up"
        data-aos-duration="2500">
-                <h3 className="uppercase text-gray-50">Contact Us</h3>
-                <ul className="space-y-1 list-none">
+                <h3 className="uppercase text-gray-50 font-bold">Contact Us</h3>
+                <ul className=" list-none space-y-4">
                   <li className="hover:text-green-500 flex items-center">
                     <CiLocationOn className="mr-1" />{" "}
                     <Link className="text-white no-underline opacity-70">
                       mymensingh,dhaka,bangladesh
                     </Link>
                   </li>
-                  <li className="hover:text-green-500">
+                  <li className="hover:text-green-500 flex items-center">
                     <MdAddCall className="mr-1" />{" "}
                     <Link className="text-white no-underline opacity-70">
                       +1 (415) 555-1234
                     </Link>
                   </li>
-                  <li className="hover:text-green-500">
+                  <li className="hover:text-green-500 flex items-center">
                     <MdOutlineMail className="mr-1" />{" "}
                     <Link className="text-white no-underline opacity-70">
                       jdoe@example.com

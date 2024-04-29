@@ -12,7 +12,7 @@ const MyList = () => {
   //   const {name, location, photo, details,email,userName,country,travelTime,cost,seasonality,totaVisitorsPerYear}
 
   useEffect(() => {
-    fetch(`http://localhost:5000/addtourists/${user?.email}`)
+    fetch(`https://travelmentor-server.vercel.app/addtourists/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMylist(data);
@@ -30,7 +30,7 @@ const MyList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/details/${_id}`, {
+        fetch(`https://travelmentor-server.vercel.app/details/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

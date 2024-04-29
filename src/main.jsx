@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/addtourists')
+        loader:()=>fetch('https://travelmentor-server.vercel.app/addtourists')
       },
       {
         path:'/addtourists',
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       {
         path:'/alltourists',
         element:<AllTourists></AllTourists>,
-        loader:()=>fetch('http://localhost:5000/addtourists')
+        loader:()=>fetch('https://travelmentor-server.vercel.app/addtourists')
       },
       {
         path:'/mylist',
@@ -48,12 +48,12 @@ const router = createBrowserRouter([
       {
         path:'/updatetourist/:id',
         element:<PrivateRoute><UpdateTourist></UpdateTourist></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
+        loader:({params})=>fetch(`https://travelmentor-server.vercel.app/details/${params.id}`)
       },
       {
         path:'/details/:id',
         element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
+        loader:({params})=>fetch(`https://travelmentor-server.vercel.app/details/${params.id}`)
       },
       {
         path:'/login',
