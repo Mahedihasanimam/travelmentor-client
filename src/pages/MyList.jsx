@@ -4,6 +4,7 @@ import { MdModeEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Link, useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet";
 const MyList = () => {
 
   const { user } = useContext(AuthContext);
@@ -49,6 +50,7 @@ const MyList = () => {
   };
   return (
     <div>
+      <Helmet><title>Mylist</title></Helmet>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}

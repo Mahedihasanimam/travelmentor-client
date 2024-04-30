@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Errorpage = () => {
     return (
+		
         <section className="flex items-center h-full p-16  text-black">
 	<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
 		<div className="max-w-md text-center">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { CiLocationOn } from "react-icons/ci";
 import { Link, useLoaderData } from "react-router-dom";
 
@@ -7,6 +8,7 @@ const CardDetails = () => {
 const {name, location, photo, details,email,userName,country,travelTime,cost,seasonality,totaVisitorsPerYear}=tourist;
   return (
     <div>
+      <Helmet><title>CardDetails</title></Helmet>
       <div className="card lg:w-4/5 w-full lg:p-8 p-2 rounded-md mx-auto bg-base-100 shadow-sm">
         <strong className="text-4xl font-bold my-8"># {name}</strong>
         

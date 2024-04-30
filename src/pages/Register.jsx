@@ -8,6 +8,7 @@ import auth from "../firebase/firebase.config";
 import { VscEyeClosed } from "react-icons/vsc";
 import { RxEyeOpen } from "react-icons/rx";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     const {createUser,logout}=useContext(AuthContext)
@@ -66,7 +67,7 @@ const Register = () => {
   }
     return (
         <div className="bg-bgimg bg-bottom  h-full p-4 bg-no-repeat bg-cover" >
-        {/* <PageTitle title={'Register'}></PageTitle> */}
+        <Helmet><title>Register</title></Helmet>
       <div className=" max-w-md my-4 mx-auto p-8 space-y-3 shadow-md rounded-xl  bg-white opacity-70 text-black" data-aos="fade-up"
    data-aos-duration="1000">
        <h1 className="text-2xl font-bold text-center">Register</h1>

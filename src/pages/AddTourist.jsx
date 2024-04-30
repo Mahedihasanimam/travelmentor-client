@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Authprovidfer/AuthProvider";
+import { Helmet } from "react-helmet";
 
 
 
@@ -44,6 +45,7 @@ console.log()
   };
     return (
         <div>
+           <Helmet><title>AddTourist</title></Helmet>
         <section className="p-6 bg-gray-100  bg-cover  text-opacity-50 dark:text-gray-900 text-start">
           <form
             onSubmit={handleAdd}

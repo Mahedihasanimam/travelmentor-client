@@ -1,3 +1,4 @@
+
 import { CiLocationOn } from "react-icons/ci";
 import { FaArrowRight, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdAddCall, MdOutlineMail } from "react-icons/md";
@@ -7,6 +8,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="px-4 mt-40  divide-y bg-[#181C2B] text-gray-100">
+       
         <div className="max-w-[1440px] mx-auto pl-4">
           <div className="container  flex flex-col justify-between py-10  space-y-8 lg:flex-row lg:space-y-0" >
             <div className="lg:w-1/3 line-clamp-4 space-y-6" data-aos="fade-up"

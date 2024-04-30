@@ -4,7 +4,8 @@ import { AuthContext } from "../Authprovidfer/AuthProvider";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import PageTitle from "../components/PageTitle";
+
+import { Helmet } from "react-helmet";
 
 
 const Login = () => {
@@ -69,7 +70,7 @@ const Login = () => {
     return (
         <div>
             <div className="bg-bgimg bg-top  h-full p-4 bg-no-repeat bg-cover " >
-          <PageTitle>Login</PageTitle>
+            <Helmet><title>Login</title></Helmet>
     
      <div className=" max-w-md my-2 mx-auto p-8 space-y-3 rounded-xl  shadow-lg  bg-white opacity-70 text-black " data-aos="fade-up"
      data-aos-duration="1000">

@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import TouristCard from "../components/TouristCard";
 import { useState } from "react";
 import { data } from "autoprefixer";
+import { Helmet } from "react-helmet";
 
 
 const AllTourists = () => {
@@ -10,6 +11,7 @@ const AllTourists = () => {
   console.log(sortitem)
 //   console.log(sort.name)
   const handlesort=(e)=>{
+    console.log('hidded')
     const targetedValue=e.target.value
     if(targetedValue=== 'average Cost'){
         fetch('http://localhost:5000/addtouristsSort')
@@ -24,6 +26,7 @@ const AllTourists = () => {
 
   return (
     <div>
+         <Helmet><title>AllTourists</title></Helmet>
       <h1 className="text-2xl font-bold text-center  border-b-4 pb-1 w-fit border-solid border-green-500">
         Filter with you budget
       </h1>
