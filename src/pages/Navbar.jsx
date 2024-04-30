@@ -110,8 +110,8 @@ const Navbar = () => {
           </div>
           <Link to={"/"} className="">
             <img
-              src="/public/[FREE - HDconvert.com] Untitled design (4).png"
-              alt=""
+              src="https://i.postimg.cc/Yqs94rkS/FREE-HDconvert-com-Untitled-design-4.png"
+              alt="logo"
             />
           </Link>
         </div>

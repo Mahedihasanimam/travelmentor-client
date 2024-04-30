@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       {
         path:'/countrys/:country',
         element:<PrivateRoute><CountryDetails></CountryDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/countrys/${params.country}`)
+        loader:({params})=>fetch(`https://travelmentor-server.vercel.app/countrys/${params.country}`)
       },
       {
         path:'/login',

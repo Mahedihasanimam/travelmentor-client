@@ -16,7 +16,7 @@ const Footer = () => {
                 className="flex justify-center space-x-3 lg:justify-start no-underline"
               >
                 <span className="lg:text-4xl text-xl font-bold text-white">
-                <img src="/public/[FREE - HDconvert.com] Untitled design (4).png" alt="" />
+                <img src="https://i.postimg.cc/Yqs94rkS/FREE-HDconvert-com-Untitled-design-4.png" alt="logo" />
                 </span>
               </a>
               <p className="opacity-70 pr-12">
