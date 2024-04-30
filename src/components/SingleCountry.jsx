@@ -27,7 +27,7 @@ const SingleCountry = ({ countryitem }) => {
               <div className="flex justify-between">
                 <h2 className="card-title">{name}</h2>
                 <strong className="flex gap-1 items-center text-green-600 text-xl font-extrabold">
-                  {cost}
+                  {cost}BDT
                 </strong>
               </div>
               <strong className="flex items-center gap-1">

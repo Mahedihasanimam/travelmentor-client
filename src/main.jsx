@@ -21,6 +21,7 @@ import Errorpage from './pages/Errorpage';
 import CardDetails from './pages/CardDetails';
 import UpdateTourist from './pages/UpdateTourist';
 import CountryDetails from './pages/CountryDetails';
+import { HelmetProvider } from 'react-helmet-async';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -75,7 +76,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
+    <HelmetProvider>
     <RouterProvider router={router} />
+    </HelmetProvider>
     <Toaster></Toaster>
     </AuthProvider>
   </React.StrictMode>,

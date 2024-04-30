@@ -19,7 +19,7 @@ const {name, location, photo, details,email,userName,country,travelTime,cost,sea
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
           
-          <strong className="text-green-600 lg:text-4xl text-xl font-bold">TotalCost : {cost}</strong>
+          <strong className="text-green-600 lg:text-4xl text-xl font-bold">TotalCost : {cost} BDT</strong>
           <strong>visitor/year : {totaVisitorsPerYear}</strong>
           <hr />
           <strong  className="flex items-center gap-1"> <CiLocationOn className="text-green-600" size={20}></CiLocationOn> {location}</strong>

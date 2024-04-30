@@ -16,14 +16,14 @@ console.log()
     const photo = form.photo.value;
     const details = form.details.value;
     const country = form.country.value;
-    const cost = form.cost.value;
+    const cost = parseInt(form.cost.value);
     const travelTime = form.travelTime.value;
     const seasonality = form.seasonality.value;
     const totaVisitorsPerYear = form.totaVisitorsPerYear.value;
     const email=user.user.email;
     const userName=user.user.displayName;
     const touristinfo = { name, location, photo, details,email,userName,country,travelTime,cost,seasonality,totaVisitorsPerYear};
-    console.log(touristinfo);
+    console.log(cost);
       fetch('https://travelmentor-server.vercel.app/addtourists',{
       method:'POST',
       headers:{'content-type':'application/json'},

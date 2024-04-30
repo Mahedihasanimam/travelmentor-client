@@ -75,7 +75,7 @@ const MyList = () => {
                 </td>
                 <td>{item.name}</td>
                 <td>{item.country}</td>
-                <td>{item.cost}</td>
+                <td>{item.cost} BDT</td>
 
                 <td>{item.location}</td>
 

@@ -4,6 +4,7 @@ import { AuthContext } from "../Authprovidfer/AuthProvider";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import PageTitle from "../components/PageTitle";
 
 
 const Login = () => {
@@ -68,7 +69,8 @@ const Login = () => {
     return (
         <div>
             <div className="bg-bgimg bg-top  h-full p-4 bg-no-repeat bg-cover " >
-    {/* <PageTitle title={'Login'}></PageTitle> */}
+          <PageTitle>Login</PageTitle>
+    
      <div className=" max-w-md my-2 mx-auto p-8 space-y-3 rounded-xl  shadow-lg  bg-white opacity-70 text-black " data-aos="fade-up"
      data-aos-duration="1000">
       <h1 className="text-2xl font-bold text-center  border-b-4 pb-1 mb-5 w-fit border-solid border-green-500">Login</h1>
