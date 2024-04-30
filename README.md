@@ -11,6 +11,9 @@ Features:
 5. Creative Design: Our website boasts a unique and visually appealing design tailored for an immersive user experience.
 6. Light/Dark Theme Toggle: Customize your browsing experience with our light and dark theme options.
 
+package for challenge task:
+1. Lottie React
+2. React-tooltip
 Navbar:
 Navigate effortlessly with our intuitive navbar, featuring:
 
